@@ -1,0 +1,1 @@
+SELECT TestDescription,Unit,substr(Value,1,5) AS Value,Component FROM Analysis WHERE Station IN ("EOL","FLASH") AND Component REGEXP '^[A-Z0-9]{4,5}$' AND StationID NOT LIKE "%SMT%" AND TestDescription NOT LIKE "%#%"
